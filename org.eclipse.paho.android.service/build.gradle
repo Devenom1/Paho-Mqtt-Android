@@ -40,6 +40,7 @@ configurations {
 dependencies {
     implementation "org.eclipse.paho:org.eclipse.paho.client.mqttv3:${rootProject.ext.clientVersion}"
     implementation "androidx.appcompat:appcompat:1.5.0"
+    implementation "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
     //implementation "com.android.support:support-v4:${rootProject.ext.supportLibVersion}"
     //implementation "androidx.legacy:legacy-support-v4:1.0.0"
     implementation fileTree(include: ['*.jar'], dir: 'libs')
@@ -129,7 +130,7 @@ task debug {
     }
 }
 // Required to bundle Java library Jar in AAR
-clean.doLast{
+/*clean.doLast{
     copyLibs.execute()
 }
 assemble.doLast {
@@ -138,4 +139,4 @@ assemble.doLast {
 
 clean.doFirst {
     delete 'libs'
-}
+}*/

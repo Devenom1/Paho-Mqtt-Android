@@ -7,7 +7,7 @@ android {
     defaultConfig {
         applicationId rootProject.ext.sampleArchivesBaseName
         minSdkVersion 16
-        targetSdkVersion 24
+        targetSdkVersion 32
         versionCode 1
         versionName "0.1"
     }
@@ -37,6 +37,7 @@ dependencies {
     //compile fileTree(dir: '../org.eclipse.paho.android/service/libs', excludes: ["org.eclipse.paho.client.mqttv3-${rootProject.ext.clientVersion}.jar"], include: '')
     //implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "androidx.appcompat:appcompat:1.5.0"
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     //compile "com.android.support:recyclerview-v7:${rootProject.ext.supportLibVersion}"
     implementation "org.eclipse.paho:org.eclipse.paho.client.mqttv3:${rootProject.ext.clientVersion}"
     implementation (project(':org.eclipse.paho.android.service')){
@@ -51,7 +52,7 @@ task publishAPK(type: Copy) {
 }
 
 
-configurations.implementation.exclude module: 'org.eclipse.paho.client.mqttv3'
+//configurations.implementation.exclude module: 'org.eclipse.paho.client.mqttv3'
 task debug {
     doLast {
         configurations.implementation.each { println it}

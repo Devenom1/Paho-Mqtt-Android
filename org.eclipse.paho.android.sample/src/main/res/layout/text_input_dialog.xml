@@ -13,10 +13,10 @@
         android:id="@+id/textView" />
 
 
-    <EditText
+    <androidx.appcompat.widget.AppCompatEditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginRight="30dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:lines="1"
         android:padding="10dp"
